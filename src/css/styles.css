@@ -1,0 +1,94 @@
+:root {
+    --main-color1: #6B728E;
+    --main-color2: #50577A;
+    --main-color3: #474E68;
+    --main-color4: #404258;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 1px solid white;
+    color: red;
+}
+
+.background {
+    z-index: -5;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: repeating-linear-gradient(-45deg,
+            var(--main-color3),
+            var(--main-color2)100px,
+            var(--main-color4) 100px,
+            var(--main-color3) 150px)
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    position: sticky;
+    top: 0;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+}
+
+nav div {
+    display: flex;
+    flex-direction: row;
+}
+
+nav a {
+    list-style-type: none;
+    padding: 25px;
+}
+
+.navleft {
+    flex: auto;
+    justify-content: flex-start;
+}
+
+.navright {
+    flex: auto;
+    justify-content: flex-end;
+}
+
+header {
+    width: 95vw;
+    height: 93vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 300%;
+    text-align: center;
+}
+
+header .header {
+    justify-content: space-evenly;
+}
+
+.describe {
+    width: 95vw;
+    height: 100vh;
+    text-align: center;
+    font-size: 300%;
+}
+
+.portfolio-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.portfolio h2 {
+    width: 100%;
+    font-size: 400%;
+    text-align: center;
+}
+
+.portfolio-div {
+    width: 40vw;
+    height: 400px;
+}
