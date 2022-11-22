@@ -9,8 +9,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    border: 1px solid white;
     color: red;
+    border: 1px solid white;
 }
 
 .background {
@@ -33,9 +33,11 @@ nav {
     background-color: black;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 nav div {
+    background-color: black;
     display: flex;
     flex-direction: row;
 }
@@ -56,6 +58,8 @@ nav a {
 }
 
 header {
+    margin-left: auto;
+    margin-right: auto;
     width: 95vw;
     height: 93vh;
     display: flex;
@@ -70,16 +74,16 @@ header .header {
 }
 
 .describe {
+    margin-left: auto;
+    margin-right: auto;
     width: 95vw;
     height: 100vh;
     text-align: center;
     font-size: 300%;
 }
 
-.portfolio-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
+.portfolio {
+    font-style: italic;
 }
 
 .portfolio h2 {
@@ -88,7 +92,15 @@ header .header {
     text-align: center;
 }
 
+.portfolio-section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .portfolio-div {
-    width: 40vw;
+    width: 44vw;
     height: 400px;
 }
