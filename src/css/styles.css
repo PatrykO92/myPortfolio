@@ -3,6 +3,7 @@
     --main-color2: #50577A;
     --main-color3: #474E68;
     --main-color4: #404258;
+    --font-color1: white;
 }
 
 @font-face {
@@ -11,8 +12,8 @@
 }
 
 @font-face {
-    font-family: monotone;
-    src: url('../fonts/bungee.ttf');
+    font-family: londrina;
+    src: url('../fonts/londrina.ttf');
 }
 
 
@@ -25,7 +26,7 @@ html {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    color: white;
+    color: var(--font-color1);
     font-family: oswald;
 }
 
@@ -51,43 +52,68 @@ nav {
     width: 100%;
     position: sticky;
     top: 0;
-    background-color: black;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    border-bottom: var(--main-color1) solid 2px;
+    flex-wrap: wrap-reverse;
+
+
 }
 
 nav div {
     background-color: black;
     display: flex;
     flex-direction: row;
+    border-bottom: var(--main-color1) solid 2px;
+}
+
+.navleft,
+.navright {
+    flex: auto;
 }
 
 .navleft {
-    flex: auto;
     justify-content: flex-start;
-
-}
-
-.navleft a {
-    margin: 10px;
-    text-decoration: none;
-    font-size: 35px;
 }
 
 .navright {
-    flex: auto;
     justify-content: flex-end;
 }
 
+.navleft a,
 .navright a {
     text-decoration: none;
+    border-radius: 25%;
+    transition: background-color 0.5s;
 }
 
+.navleft a:hover,
+.navright a:hover {
+    background-color: var(--main-color1);
+}
+
+.navleft a,
+.navright a {
+    font-family: londrina;
+    margin: 9px;
+    padding: 5px;
+    font-size: 35px;
+}
+
+
 .nav-icon {
-    height: 45px;
-    margin: 10px;
+    height: 100%;
+    filter: invert(96%) sepia(97%) saturate(12%) hue-rotate(237deg) brightness(103%) contrast(103%);
+}
+
+.tooltiptext {
+    font-size: 10px;
+}
+
+
+.down-icon {
+    position: fixed;
+    left: 49%;
+    bottom: 2vh;
     filter: invert(96%) sepia(97%) saturate(12%) hue-rotate(237deg) brightness(103%) contrast(103%);
 }
 
@@ -103,16 +129,13 @@ header {
     text-align: center;
 }
 
-header h1 {
-    font-family: monotone;
-}
-
-header h2 {
-    font-family: monotone;
+header h1,
+header h2,
+header a {
+    font-family: londrina;
 }
 
 header a {
-    font-family: monotone;
     text-decoration: none;
 }
 
@@ -142,15 +165,12 @@ header a {
     width: 45%
 }
 
-.portfolio {
-    border: 1px solid wheat;
-}
 
 .portfolio h2 {
     margin-top: 10vh;
     width: 100%;
     font-size: 400%;
-    font-family: monotone;
+    font-family: londrina;
     text-align: center;
 }
 
@@ -170,5 +190,16 @@ header a {
 .contact h2 {
     text-align: center;
     font-size: 50px;
-    font-family: monotone;
+    font-family: londrina;
+}
+
+@media only screen and (max-width: 768px) {
+
+    /* mediaquerry for phones */
+    .navleft,
+    .navright {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: -9px;
+    }
 }
