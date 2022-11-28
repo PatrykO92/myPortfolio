@@ -8,14 +8,13 @@
     <title>Patryk Orlowski - Portfolio</title>
     <link rel="icon" href="src/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="src/css/styles.css">
-    <!-- Added this JQuerry only for training purpouse -->
     <script src="src/js/jquery-3.6.1.min.js"></script>
     <script src="src/js/jqueryscript.js"></script>
 </head>
 
 <body>
     <div class="background"></div>
-    
+
     <nav>
         <div class="navleft">
             <a href='#about'>About</a>
@@ -23,7 +22,8 @@
             <a href='#contact'>Contact</a>
         </div>
         <div class="navright">
-            <a href="https://pl.linkedin.com/"><img class="nav-icon" src="src/icons/linkedin.svg" alt="LinkedIn" /></a>
+            <a href="https://www.linkedin.com/in/patryk-or%C5%82owski-348515258/"><img class="nav-icon"
+                    src="src/icons/linkedin.svg" alt="LinkedIn" /></a>
             <a href="https://github.com/PatrykO92"><img class="nav-icon" src="src/icons/github.svg" alt="GitHub" /></a>
             <a href="src/files/cv.pdf"><img class="nav-icon" src="src/icons/resume.svg" alt="Resume" /></a>
         </div>
@@ -34,18 +34,25 @@
     <header id="header">
         <h1 class="header">Patryk Orlowski</h1>
         <h2 class="header">Frontend Web Developer</h2>
+        <div></div>
     </header>
 
     <main>
         <div id="about" class="about-me">
+
             <h2>Hello! 👋 I'm Patryk</h2>
-            <div class="about-left">
-            </div>
-            <div class="about-right">
-                <p>Self-tought programer</p>
-                <p>Frontend Specialized</p>
-                <p>HTML, CSS, JavaScript</p>
-                <p>Python, Django</p>
+
+            <div class="flexbox">
+                <div><img src="src/images/myphoto.png" alt="My photo" /></div>
+                <div>
+                    <ul class="about-me-ul">
+                        <li>📚 Self-tought programer</li>
+                        <li>🖥️ Frontend Specialized</li>
+                        <li>👨‍💻 HTML, CSS, JavaScript</li>
+                        <li>💾 Python, Django</li>
+                    </ul>
+                </div>
+
             </div>
         </div>
     </main>
@@ -61,12 +68,20 @@
     </section>
 
     <section id="contact" class="contact">
-        <h2>Reach out</h2>
+        <div>
+            <h2>Reach out</h2>
+            <form action="https://formspree.io/f/xaykzgna" method="POST">
+                <input type="email" name="email" placeholder="Email...">
+                <input type="text" name="name" placeholder="Name...">
+                <textarea name="message" placeholder="Please, enter Your message here..."></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
     </section>
 
     <footer>
-        <p>Built using html, css and with help from "tee" </p>
-        <p>patrykorlowski.com © 2022</p>
+        <p>Built using HTML, CSS and JavaScript</p>
+        <p>patrykorlowski-portfolio.netlify.app</p>
     </footer>
 
     <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>

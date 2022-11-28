@@ -4,6 +4,7 @@
     --main-color3: #474E68;
     --main-color4: #404258;
     --font-color1: white;
+    --background-color1: black;
 }
 
 @font-face {
@@ -11,11 +12,11 @@
     src: url('../fonts/oswald.ttf');
 }
 
-@font-face {
-    font-family: londrina;
-    src: url('../fonts/londrina.ttf');
-}
 
+@font-face {
+    font-family: neon;
+    src: url('../fonts/neon.otf');
+}
 
 
 html {
@@ -26,8 +27,14 @@ html {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    border: 0;
     color: var(--font-color1);
     font-family: oswald;
+}
+
+::placeholder {
+    color: var(--main-color4);
+    opacity: 1;
 }
 
 .background {
@@ -55,12 +62,10 @@ nav {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap-reverse;
-
-
 }
 
 nav div {
-    background-color: black;
+    background-color: var(--background-color1);
     display: flex;
     flex-direction: row;
     border-bottom: var(--main-color1) solid 2px;
@@ -81,39 +86,38 @@ nav div {
 
 .navleft a,
 .navright a {
+    margin: 9px;
+    padding: 5px;
+    font-size: 35px;
     text-decoration: none;
+}
+
+.navleft a {
+    transition: color 0.5s;
+}
+
+.navleft a:hover {
+    color: var(--main-color1);
+}
+
+.navright a {
     border-radius: 25%;
     transition: background-color 0.5s;
 }
 
-.navleft a:hover,
 .navright a:hover {
     background-color: var(--main-color1);
 }
-
-.navleft a,
-.navright a {
-    font-family: londrina;
-    margin: 9px;
-    padding: 5px;
-    font-size: 35px;
-}
-
 
 .nav-icon {
     height: 100%;
     filter: invert(96%) sepia(97%) saturate(12%) hue-rotate(237deg) brightness(103%) contrast(103%);
 }
 
-.tooltiptext {
-    font-size: 10px;
-}
-
-
 .down-icon {
     position: fixed;
     left: 49%;
-    bottom: 2vh;
+    bottom: 6vh;
     filter: invert(96%) sepia(97%) saturate(12%) hue-rotate(237deg) brightness(103%) contrast(103%);
 }
 
@@ -121,7 +125,7 @@ header {
     margin-left: auto;
     margin-right: auto;
     width: 95vw;
-    height: 93vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -132,7 +136,7 @@ header {
 header h1,
 header h2,
 header a {
-    font-family: londrina;
+    font-family: neon;
 }
 
 header a {
@@ -141,36 +145,54 @@ header a {
 
 
 .about-me {
-    margin-left: auto;
-    margin-right: auto;
-    width: 95vw;
     height: 100vh;
-    text-align: center;
-    font-size: 300%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
 }
 
 .about-me h2 {
-    margin-top: 10vh;
+    padding: 12vh;
     width: 100%;
+    font-size: 65px;
+    text-align: center;
 }
 
-.about-left {
-    width: 45%;
+.flexbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: flex-end;
 }
 
-.about-right {
-    width: 45%
+.flexbox img {
+    display: block;
+    margin: auto;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border: 4px solid var(--main-color4);
+    border-radius: 100%;
 }
 
+.flexbox div {
+    flex: 1;
+}
+
+.about-me-ul {
+    display: block;
+    margin: auto;
+    width: 90%;
+    list-style: none;
+    font-size: 45px;
+}
+
+.portfolio {
+    padding-top: 12vh;
+    height: 100vh;
+}
 
 .portfolio h2 {
-    margin-top: 10vh;
     width: 100%;
     font-size: 400%;
-    font-family: londrina;
+    font-family: neon;
     text-align: center;
 }
 
@@ -184,13 +206,76 @@ header a {
 
 .portfolio-div {
     width: 44vw;
-    height: 400px;
+    min-height: 200px;
+}
+
+.contact {
+    padding-top: 12vh;
+    height: 90vh;
+}
+
+.contact div {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contact h2 {
     text-align: center;
     font-size: 50px;
-    font-family: londrina;
+    font-family: neon;
+    margin-bottom: 10vh;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    padding: 15px;
+    border: 2px solid var(--background-color1);
+    border-radius: 25px;
+    background-color: var(--main-color4);
+
+}
+
+.contact input,
+.contact textarea {
+    font-size: 20px;
+    width: 98%;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: var(--main-color1);
+}
+
+.contact textarea {
+    min-height: 15vh;
+    resize: none;
+}
+
+.contact button {
+    font-size: 25px;
+    width: 150px;
+    background-color: var(--main-color2);
+    border: 2px solid var(--background-color1);
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.5s;
+}
+
+.contact button:hover {
+    background-color: var(--main-color3);
+    border: 2px solid var(--background-color1);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+footer {
+    background-color: var(--background-color1);
+    border-top: var(--main-color1) solid 2px;
+    text-align: center;
+    padding: 10px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -200,6 +285,20 @@ header a {
     .navright {
         width: 100%;
         justify-content: center;
-        margin-bottom: -9px;
+        margin-top: -10px;
+    }
+
+    .navleft a,
+    .navright a {
+        font-size: 25px;
+    }
+
+    .navleft a {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .contact div {
+        width: 95%;
     }
 }
