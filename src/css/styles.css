@@ -149,7 +149,8 @@ header a {
 }
 
 .about-me h2 {
-    padding: 12vh;
+    padding-top: 12vh;
+    padding-bottom: 5vh;
     width: 100%;
     font-size: 65px;
     text-align: center;
@@ -300,5 +301,26 @@ footer {
 
     .contact div {
         width: 95%;
+    }
+
+    header {
+        font-size: 30px;
+    }
+
+    .about-me h2 {
+        font-size: 40px;
+    }
+
+    .flexbox {
+        flex-direction: column;
+    }
+
+    .flexbox div {
+        width: 100%;
+    }
+
+    .about-me-ul {
+        font-size: 25px;
+        text-align: center;
     }
 }
