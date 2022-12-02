@@ -1,326 +1,356 @@
 :root {
-    --main-color1: #6B728E;
-    --main-color2: #50577A;
-    --main-color3: #474E68;
-    --main-color4: #404258;
-    --font-color1: white;
-    --background-color1: black;
+  --main-color1: #6b728e;
+  --main-color2: #50577a;
+  --main-color3: #474e68;
+  --main-color4: #404258;
+  --font-color1: white;
+  --border-color-1: rgba(0, 0, 0, 100%);
+  --background-color1: rgba(0, 0, 0, 95%);
 }
 
 @font-face {
-    font-family: oswald;
-    src: url('../fonts/oswald.ttf');
+  font-family: oswald;
+  src: url("../fonts/oswald.ttf");
 }
-
 
 @font-face {
-    font-family: neon;
-    src: url('../fonts/neon.otf');
+  font-family: neon;
+  src: url("../fonts/neon.otf");
 }
-
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    color: var(--font-color1);
-    font-family: oswald;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--font-color1);
+  font-family: oswald;
 }
 
 ::placeholder {
-    color: var(--main-color4);
-    opacity: 1;
+  color: var(--main-color4);
+  opacity: 1;
 }
 
 .background {
-    z-index: -5;
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background: repeating-linear-gradient(-45deg,
-            transparent,
-            transparent 30px,
-            var(--main-color4) 30px,
-            var(--main-color4) 35px),
-        repeating-linear-gradient(45deg,
-            transparent,
-            transparent 30px,
-            var(--main-color4) 30px,
-            var(--main-color4) 35px),
-        repeating-linear-gradient(120deg, var(--main-color3), var(--main-color4)75%, var(--main-color4))
+  z-index: -5;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 30px,
+      var(--main-color4) 30px,
+      var(--main-color4) 35px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 30px,
+      var(--main-color4) 30px,
+      var(--main-color4) 35px
+    ),
+    repeating-linear-gradient(
+      120deg,
+      var(--main-color3),
+      var(--main-color4) 75%,
+      var(--main-color4)
+    );
 }
 
 nav {
-    width: 100%;
-    position: sticky;
-    top: 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap-reverse;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  z-index: 5;
 }
 
 nav div {
-    background-color: var(--background-color1);
-    display: flex;
-    flex-direction: row;
-    border-bottom: var(--main-color1) solid 2px;
+  background-color: var(--background-color1);
+  display: flex;
+  flex-direction: row;
+  border-bottom: var(--main-color1) solid 2px;
 }
 
 .navleft,
 .navright {
-    flex: auto;
+  flex: auto;
 }
 
 .navleft {
-    justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 .navright {
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .navleft a,
 .navright a {
-    margin: 9px;
-    padding: 5px;
-    font-size: 35px;
-    text-decoration: none;
+  margin: 9px;
+  padding: 5px;
+  font-size: 3vh;
+  text-decoration: none;
 }
 
 .navleft a {
-    transition: color 0.5s;
+  transition: color 0.5s;
 }
 
 .navleft a:hover {
-    color: var(--main-color1);
+  color: var(--main-color1);
 }
 
 .navright a {
-    border-radius: 25%;
-    transition: background-color 0.5s;
+  border-radius: 25%;
+  transition: background-color 0.5s;
 }
 
 .navright a:hover {
-    background-color: var(--main-color1);
+  background-color: var(--main-color1);
 }
 
 .nav-icon {
-    height: 100%;
-    filter: invert(96%) sepia(97%) saturate(12%) hue-rotate(237deg) brightness(103%) contrast(103%);
+  height: 100%;
+  filter: invert(96%) sepia(97%) saturate(12%) hue-rotate(237deg)
+    brightness(103%) contrast(103%);
 }
 
 .down-icon {
-    position: fixed;
-    left: 49%;
-    bottom: 6vh;
-    filter: invert(96%) sepia(97%) saturate(12%) hue-rotate(237deg) brightness(103%) contrast(103%);
+  position: fixed;
+  left: 49%;
+  bottom: 6vh;
+  filter: invert(96%) sepia(97%) saturate(12%) hue-rotate(237deg)
+    brightness(103%) contrast(103%);
 }
 
 header {
-    margin-left: auto;
-    margin-right: auto;
-    width: 95vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    font-size: 50px;
-    text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 2vw;
+  text-align: center;
 }
 
 header h1,
 header h2,
 header a {
-    font-family: neon;
+  font-family: neon;
 }
 
 header a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-
 .about-me {
-    height: 100vh;
+  min-height: 100vh;
 }
 
 .about-me h2 {
-    padding-top: 12vh;
-    padding-bottom: 5vh;
-    width: 100%;
-    font-size: 65px;
-    text-align: center;
+  padding-top: 12vh;
+  padding-bottom: 5vh;
+  width: 100%;
+  font-size: 65px;
+  text-align: center;
 }
 
 .flexbox {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-items: flex-end;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: flex-end;
 }
 
 .flexbox img {
-    display: block;
-    margin: auto;
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    border: 4px solid var(--main-color4);
-    border-radius: 100%;
+  display: block;
+  margin: auto;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border: 4px solid var(--border-color-1);
+  border-radius: 100%;
 }
 
 .flexbox div {
-    flex: 1;
+  flex: 1;
 }
 
 .about-me-ul {
-    display: block;
-    margin: auto;
-    width: 90%;
-    list-style: none;
-    font-size: 45px;
+  display: block;
+  margin: auto;
+  width: 90%;
+  list-style: none;
+  font-size: 45px;
 }
 
 .portfolio {
-    padding-top: 12vh;
-    height: 100vh;
+  padding-top: 12vh;
+  min-height: 100vh;
 }
 
 .portfolio h2 {
-    width: 100%;
-    font-size: 400%;
-    font-family: neon;
-    text-align: center;
+  width: 100%;
+  font-size: 400%;
+  font-family: neon;
+  text-align: center;
+  margin-bottom: 4vh;
 }
 
 .portfolio-section {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2vw;
 }
 
 .portfolio-div {
-    width: 44vw;
-    min-height: 200px;
+  border: 2px solid var(--border-color-1);
+  border-radius: 20px;
+  background-color: var(--main-color4);
+  width: 48%;
+  min-height: 200px;
+  display: flex;
+  flex-direction: row;
+  gap: 1vh;
+  padding: 1vh;
+}
+
+.portfolio-div div {
+  width: 49%;
+}
+
+.portfolio-div img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
 }
 
 .contact {
-    padding-top: 12vh;
-    height: 90vh;
+  padding-top: 12vh;
+  min-height: 90vh;
 }
 
 .contact div {
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .contact h2 {
-    text-align: center;
-    font-size: 50px;
-    font-family: neon;
-    margin-bottom: 10vh;
+  text-align: center;
+  font-size: 50px;
+  font-family: neon;
+  margin-bottom: 10vh;
 }
 
 .contact form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    padding: 15px;
-    border: 2px solid var(--background-color1);
-    border-radius: 25px;
-    background-color: var(--main-color4);
-
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  padding: 15px;
+  border: 2px solid var(--border-color-1);
+  border-radius: 25px;
+  background-color: var(--main-color4);
 }
 
 .contact input,
 .contact textarea {
-    font-size: 20px;
-    width: 98%;
-    padding: 8px;
-    border-radius: 5px;
-    background-color: var(--main-color1);
+  font-size: 20px;
+  width: 98%;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: var(--main-color1);
 }
 
 .contact textarea {
-    min-height: 15vh;
-    resize: none;
+  min-height: 15vh;
+  resize: none;
 }
 
 .contact button {
-    font-size: 25px;
-    width: 150px;
-    background-color: var(--main-color2);
-    border: 2px solid var(--background-color1);
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color 0.5s;
+  font-size: 25px;
+  width: 150px;
+  background-color: var(--main-color2);
+  border: 2px solid var(--border-color-1);
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.5s;
 }
 
 .contact button:hover {
-    background-color: var(--main-color3);
-    border: 2px solid var(--background-color1);
-    padding: 10px;
-    border-radius: 5px;
+  background-color: var(--main-color3);
+  border: 2px solid var(--border-color-1);
+  padding: 10px;
+  border-radius: 5px;
 }
 
-
 footer {
-    background-color: var(--background-color1);
-    border-top: var(--main-color1) solid 2px;
-    text-align: center;
-    padding: 10px;
+  background-color: var(--background-color1);
+  border-top: var(--main-color1) solid 2px;
+  text-align: center;
+  padding: 10px;
 }
 
 @media only screen and (max-width: 768px) {
+  /* mediaquerry for phones */
+  .navleft,
+  .navright {
+    width: 100%;
+    justify-content: center;
+    margin-top: -10px;
+  }
 
-    /* mediaquerry for phones */
-    .navleft,
-    .navright {
-        width: 100%;
-        justify-content: center;
-        margin-top: -10px;
-    }
+  .navleft a,
+  .navright a {
+    font-size: 4vw;
+  }
 
-    .navleft a,
-    .navright a {
-        font-size: 25px;
-    }
+  .navleft a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
 
-    .navleft a {
-        margin-top: 5px;
-        margin-bottom: 5px;
-    }
+  .contact div {
+    width: 95%;
+  }
 
-    .contact div {
-        width: 95%;
-    }
+  header {
+    font-size: 3vw;
+  }
 
-    header {
-        font-size: 30px;
-    }
+  .about-me h2 {
+    font-size: 40px;
+  }
 
-    .about-me h2 {
-        font-size: 40px;
-    }
+  .flexbox {
+    flex-direction: column;
+  }
 
-    .flexbox {
-        flex-direction: column;
-    }
+  .flexbox div {
+    width: 100%;
+  }
 
-    .flexbox div {
-        width: 100%;
-    }
+  .about-me-ul {
+    font-size: 25px;
+    text-align: center;
+  }
 
-    .about-me-ul {
-        font-size: 25px;
-        text-align: center;
-    }
+  .portfolio-div {
+    width: 99%;
+  }
 }

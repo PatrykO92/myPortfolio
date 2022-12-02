@@ -1,91 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Patryk Orlowski - Portfolio</title>
-    <link rel="icon" href="src/images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="icon" href="src/images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="src/css/styles.css" />
     <script src="src/js/jquery-3.6.1.min.js"></script>
     <script src="src/js/jqueryscript.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="background"></div>
 
     <nav>
-        <div class="navleft">
-            <a href='#about'>About</a>
-            <a href='#portfolio'>Portfolio</a>
-            <a href='#contact'>Contact</a>
-        </div>
-        <div class="navright">
-            <a href="https://www.linkedin.com/in/patryk-or%C5%82owski-348515258/"><img class="nav-icon"
-                    src="src/icons/linkedin.svg" alt="LinkedIn" /></a>
-            <a href="https://github.com/PatrykO92"><img class="nav-icon" src="src/icons/github.svg" alt="GitHub" /></a>
-            <a href="src/files/cv.pdf"><img class="nav-icon" src="src/icons/resume.svg" alt="Resume" /></a>
-        </div>
+      <div class="navleft">
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="navright">
+        <a href="https://www.linkedin.com/in/patryk-or%C5%82owski-348515258/"
+          ><img class="nav-icon" src="src/icons/linkedin.svg" alt="LinkedIn"
+        /></a>
+        <a href="https://github.com/PatrykO92"
+          ><img class="nav-icon" src="src/icons/github.svg" alt="GitHub"
+        /></a>
+        <a href="src/files/cv.pdf"
+          ><img class="nav-icon" src="src/icons/resume.svg" alt="Resume"
+        /></a>
+      </div>
     </nav>
 
-    <a id="down" href='#about'><img class="down-icon" src="src/icons/arrow_down.svg" alt="More" /></a>
+    <a id="down" href="#about"
+      ><img class="down-icon" src="src/icons/arrow_down.svg" alt="More"
+    /></a>
 
     <header id="header">
-        <h1 class="header">Patryk Orlowski</h1>
-        <h2 class="header">Frontend Web Developer</h2>
-        <div></div>
+      <h1 class="header">Patryk Orlowski</h1>
+      <h2 class="header">Frontend Web Developer</h2>
+      <div></div>
     </header>
 
     <main>
-        <div id="about" class="about-me">
+      <div id="about" class="about-me">
+        <h2>Hello! 👋 I'm Patryk</h2>
 
-            <h2>Hello! 👋 I'm Patryk</h2>
-
-            <div class="flexbox">
-                <div><img src="src/images/myphoto.png" alt="My photo" /></div>
-                <div>
-                    <ul class="about-me-ul">
-                        <li>📚 Self-tought programer</li>
-                        <li>🖥️ Frontend Specialized</li>
-                        <li>👨‍💻 HTML, CSS, JavaScript</li>
-                        <li>💾 Python, Django</li>
-                    </ul>
-                </div>
-
-            </div>
+        <div class="flexbox">
+          <div><img src="src/images/myphoto.png" alt="My photo" /></div>
+          <div>
+            <ul class="about-me-ul">
+              <li>📚 Self-tought programer</li>
+              <li>🖥️ Frontend Specialized</li>
+              <li>👨‍💻 HTML, CSS, JavaScript</li>
+              <li>💾 Python, Django</li>
+            </ul>
+          </div>
         </div>
+      </div>
     </main>
 
     <section id="portfolio" class="portfolio">
-        <h2>Portfolio</h2>
-        <div class="portfolio-section">
-            <div class="portfolio-div"></div>
-            <div class="portfolio-div"></div>
-            <div class="portfolio-div"></div>
-            <div class="portfolio-div"></div>
+      <h2>Portfolio</h2>
+      <div class="portfolio-section">
+        <div class="portfolio-div">
+          <div>
+            <img
+              src="src/portfolio-projects/placeholder-image.png"
+              alt="portfolio image"
+            />
+          </div>
+          <div>
+            <a href="#placeholder">Git</a>
+            <a href="#placeholder">Live</a>
+            <a href="#placeholder">More</a>
+          </div>
         </div>
+        <div class="portfolio-div">
+          <div>
+            <img
+              src="src/portfolio-projects/placeholder-image.png"
+              alt="portfolio image"
+            />
+          </div>
+          <div></div>
+        </div>
+        <div class="portfolio-div">
+          <div>
+            <img
+              src="src/portfolio-projects/placeholder-image.png"
+              alt="portfolio image"
+            />
+          </div>
+          <div></div>
+        </div>
+        <div class="portfolio-div">
+          <div>
+            <img
+              src="src/portfolio-projects/placeholder-image.png"
+              alt="portfolio image"
+            />
+          </div>
+          <div></div>
+        </div>
+      </div>
     </section>
 
     <section id="contact" class="contact">
-        <div>
-            <h2>Reach out</h2>
-            <form action="https://formspree.io/f/xaykzgna" method="POST">
-                <input type="email" name="email" placeholder="Email...">
-                <input type="text" name="name" placeholder="Name...">
-                <textarea name="message" placeholder="Please, enter Your message here..."></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </div>
+      <div>
+        <h2>Reach out</h2>
+        <form action="https://formspree.io/f/xaykzgna" method="POST">
+          <input type="email" name="email" placeholder="Email..." />
+          <input type="text" name="name" placeholder="Name..." />
+          <textarea
+            name="message"
+            placeholder="Please, enter Your message here..."
+          ></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
     </section>
 
     <footer>
-        <p>Built using HTML, CSS and JavaScript</p>
-        <p>patrykorlowski.netlify.app</p>
+      <p>Built using HTML, CSS and JavaScript</p>
+      <p>patrykorlowski.netlify.app</p>
     </footer>
 
     <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
-
-</body>
-
+  </body>
 </html>
