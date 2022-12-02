@@ -35,6 +35,20 @@ html {
   opacity: 1;
 }
 
+button {
+  font-size: 25px;
+  background-color: var(--main-color1);
+  border: 2px solid var(--border-color-1);
+  padding: 0 10px;
+  border-radius: 5px;
+  transition: background-color 0.5s;
+}
+
+button:hover {
+  background-color: var(--main-color3);
+  border: 2px solid var(--border-color-1);
+}
+
 .background {
   z-index: -5;
   position: fixed;
@@ -60,6 +74,11 @@ html {
       var(--main-color4) 75%,
       var(--main-color4)
     );
+}
+
+.blurred {
+  z-index: 10;
+  background: var(--background-color1);
 }
 
 nav {
@@ -230,13 +249,38 @@ header a {
 
 .portfolio-div div {
   width: 49%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .portfolio-div img {
-  display: block;
   max-width: 100%;
   height: auto;
   border-radius: 20px;
+}
+
+.project-link {
+  font-size: medium;
+  padding: 2px;
+}
+
+.hidden {
+  display: none;
+}
+
+.more-info {
+  text-align: center;
+  z-index: 15;
+  position: fixed;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  padding: 5px;
+  border: 4px solid var(--main-color1);
+  border-radius: 20px;
+  background-color: var(--main-color4);
 }
 
 .contact {
@@ -280,23 +324,6 @@ header a {
 .contact textarea {
   min-height: 15vh;
   resize: none;
-}
-
-.contact button {
-  font-size: 25px;
-  width: 150px;
-  background-color: var(--main-color2);
-  border: 2px solid var(--border-color-1);
-  padding: 10px;
-  border-radius: 5px;
-  transition: background-color 0.5s;
-}
-
-.contact button:hover {
-  background-color: var(--main-color3);
-  border: 2px solid var(--border-color-1);
-  padding: 10px;
-  border-radius: 5px;
 }
 
 footer {
