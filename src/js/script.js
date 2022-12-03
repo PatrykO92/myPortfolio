@@ -1,14 +1,14 @@
 "use strict";
+// Arrow down button
+const arrowDown = document.getElementById("down");
 
 // Creating list of links to projects
 const linksToProjects = document.querySelectorAll(".project-link");
 const linksToExitProjects = document.querySelectorAll(".exit-project");
 // Creating list of project divs
 const listOfProjects = document.querySelectorAll(".project");
+
 // Showing and hidding projects
-
-// quit from project by esc key
-
 for (let i = 0; i < 4; i++) {
   linksToProjects[i].addEventListener("click", function () {
     listOfProjects[i].classList.toggle("hidden");
@@ -22,3 +22,11 @@ for (let i = 0; i < 4; i++) {
     document.querySelector(".mask").classList.toggle("blurred");
   });
 }
+
+// Hide arrow after click or screen scroll
+arrowDown.addEventListener("click", function () {
+  arrowDown.classList.add("hidden");
+});
+window.addEventListener("scroll", function () {
+  arrowDown.classList.add("hidden");
+});

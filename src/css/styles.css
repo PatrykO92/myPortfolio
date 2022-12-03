@@ -6,6 +6,7 @@
   --font-color1: white;
   --border-color-1: rgba(0, 0, 0, 100%);
   --background-color1: rgba(0, 0, 0, 95%);
+  --mask-color1: rgba(0, 0, 0, 90%);
 }
 
 @font-face {
@@ -77,18 +78,18 @@ button:hover {
 }
 
 .blurred {
+  transition: background-color 0.5s;
   z-index: 10;
-  background: var(--background-color1);
+  background: var(--mask-color1);
 }
 
 nav {
   width: 100%;
   position: sticky;
-position: -webkit-sticky;
-position: -moz-sticky;
-position: -o-sticky;
-position: -ms-sticky;
-position: sticky;
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -o-sticky;
+  position: -ms-sticky;
   top: 0;
   display: flex;
   flex-direction: row;
@@ -120,7 +121,7 @@ nav div {
 .navright a {
   margin: 9px;
   padding: 5px;
-  font-size: 3vh;
+  font-size: 30px;
   text-decoration: none;
 }
 
@@ -163,7 +164,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  font-size: 2vw;
+  font-size: 50px;
   text-align: center;
 }
 
@@ -225,7 +226,7 @@ header a {
 
 .portfolio h2 {
   width: 100%;
-  font-size: 2vw;
+  font-size: 50px;
   font-family: neon;
   text-align: center;
   margin-bottom: 4vh;
@@ -349,7 +350,7 @@ footer {
 
   .navleft a,
   .navright a {
-    font-size: 4vw;
+    font-size: 25px;
   }
 
   .navleft a {
@@ -362,10 +363,14 @@ footer {
   }
 
   header {
-    font-size: 3vw;
+    font-size: 25px;
   }
 
   .about-me h2 {
+    font-size: 40px;
+  }
+
+  .portfolio h2 {
     font-size: 40px;
   }
 
@@ -384,5 +389,11 @@ footer {
 
   .portfolio-div {
     width: 99%;
+  }
+  .more-info {
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
   }
 }
