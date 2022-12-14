@@ -1,7 +1,6 @@
 "use strict";
 // Arrow down button
 const arrowDown = document.getElementById("down");
-
 // Creating list of links to projects
 const linksToProjects = document.querySelectorAll(".project-link");
 const linksToExitProjects = document.querySelectorAll(".exit-project");
@@ -29,4 +28,25 @@ arrowDown.addEventListener("click", function () {
 });
 window.addEventListener("scroll", function () {
   arrowDown.classList.add("hidden");
+});
+
+// Reveal segments
+const allSegments = document.querySelectorAll(".segment");
+
+const revealSegments = function (entries, observer) {
+  const entry = entries[0];
+  if (!entry.isIntersecting) return;
+
+  entry.target.classList.remove("unshowed");
+  observer.unobserve(entry.target);
+};
+
+const segmentObserver = new IntersectionObserver(revealSegments, {
+  root: null,
+  threshold: 0.2,
+});
+
+allSegments.forEach(function (segment) {
+  segment.classList.add("unshowed");
+  segmentObserver.observe(segment);
 });

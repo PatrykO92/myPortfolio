@@ -167,6 +167,7 @@ nav div {
   bottom: 6vh;
   filter: invert(96%) sepia(97%) saturate(12%) hue-rotate(237deg)
     brightness(103%) contrast(103%);
+  transition: display 2s;
 }
 
 header {
@@ -280,9 +281,22 @@ header h2 {
   border-radius: 20px;
   background-color: var(--main-color4);
 }
+.overflowed {
+  overflow: hidden;
+}
+
+.segment {
+  transition: transform 0.5s, opacity 1s;
+}
+
+.unshowed {
+  transform: translateY(4vmin);
+  opacity: 0;
+}
 
 .hidden {
   display: none;
+  transition: display 2s;
 }
 
 .contact {
@@ -335,7 +349,16 @@ footer {
 }
 
 footer p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vmin;
   font-size: 2vmin;
+}
+
+footer p img {
+  height: auto;
+  width: 2vmin;
 }
 
 @media only screen and (max-width: 768px) {
