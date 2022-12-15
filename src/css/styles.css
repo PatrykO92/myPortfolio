@@ -262,6 +262,10 @@ header h2 {
   border-radius: 20px;
 }
 
+.lazy-img {
+  filter: blur(2px);
+}
+
 .project-link {
   padding: 2px;
 }
@@ -286,11 +290,11 @@ header h2 {
 }
 
 .segment {
-  transition: transform 0.5s, opacity 1s;
+  transition: transform 1s, opacity 1s;
 }
 
 .unshowed {
-  transform: translateY(4vmin);
+  transform: translatey(3vmin);
   opacity: 0;
 }
 
