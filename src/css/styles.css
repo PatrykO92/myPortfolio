@@ -62,6 +62,47 @@ button:hover {
   border: 2px solid var(--border-color-1);
 }
 
+/* This is just for troll view */
+.troll-view-1,
+.troll-view-2 {
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  background-color: pink;
+  height: 100vh;
+  width: 50vw;
+  z-index: 15;
+  position: fixed;
+  text-align: right;
+  transition: transform 3s, opacity 3s, z-index 4s;
+}
+.troll-view-2 {
+  left: 50vw;
+  text-align: left;
+}
+
+.troll h1,
+.troll h3,
+.troll p {
+  text-shadow: none;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.troll-view-hidden-1 {
+  transform: translateX(-5vw) rotate(95deg) translateY(200vh);
+  z-index: -15;
+  opacity: 0;
+}
+
+.troll-view-hidden-2 {
+  transform: translateX(5vw) rotate(-95deg) translateY(200vh);
+  opacity: 0;
+  z-index: -15;
+}
+/* end of troll view */
+
 .background {
   z-index: -5;
   position: fixed;
@@ -290,11 +331,10 @@ header h2 {
 }
 
 .segment {
-  transition: transform 1s, opacity 1s;
+  transition: opacity 2s;
 }
 
 .unshowed {
-  transform: translatey(3vmin);
   opacity: 0;
 }
 

@@ -72,3 +72,20 @@ const imgObserver = new IntersectionObserver(
 );
 
 imgTargets.forEach((target) => imgObserver.observe(target));
+
+// Troll site hide and prevent from leaving
+const trollsDivs = document.querySelectorAll(".troll");
+const trollEvent = trollsDivs.forEach((e) =>
+  e.addEventListener("click", function (e) {
+    console.log(trollsDivs);
+    trollsDivs[0].classList.add("troll-view-hidden-1");
+    trollsDivs[1].classList.add("troll-view-hidden-2");
+    removeEventListener("click", trollEvent, false);
+  })
+);
+
+setTimeout(() => {
+  trollsDivs[0].classList.add("troll-view-hidden-1");
+  trollsDivs[1].classList.add("troll-view-hidden-2");
+  removeEventListener("click", trollEvent, false);
+}, 1500);
