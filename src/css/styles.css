@@ -24,6 +24,26 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Scroll bar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--border-color-1);
+  border: 1px solid var(--main-color1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--main-color2);
+  border: 1px solid var(--main-color1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--main-color3);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -50,7 +70,7 @@ h2 {
 
 button {
   background-color: var(--main-color1);
-  border: 2px solid var(--border-color-1);
+  border: 1px solid var(--border-color-1);
   font-size: 3vmin;
   padding: 0 5vmin;
   border-radius: 7px;
@@ -59,55 +79,13 @@ button {
 
 button:hover {
   background-color: var(--main-color3);
-  border: 2px solid var(--border-color-1);
 }
 
-/* This is just for troll view */
-.troll-view-1,
-.troll-view-2 {
-  display: flex;
-  flex-direction: column;
-  justify-items: flex-end;
-  justify-content: center;
-  overflow: hidden;
-  background-color: pink;
-  height: 100vh;
-  width: 50vw;
-  z-index: 15;
-  position: fixed;
-  text-align: right;
-  transition: transform 3s, opacity 3s, z-index 4s;
-}
-.troll-view-2 {
-  left: 50vw;
-  text-align: left;
-}
-
-.troll h1,
-.troll h3,
-.troll p {
-  text-shadow: none;
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
-}
-
-.troll-view-hidden-1 {
-  transform: translateX(-5vw) rotate(95deg) translateY(200vh);
-  z-index: -15;
-  opacity: 0;
-}
-
-.troll-view-hidden-2 {
-  transform: translateX(5vw) rotate(-95deg) translateY(200vh);
-  opacity: 0;
-  z-index: -15;
-}
-/* end of troll view */
-
+/* This is just for welcome view */
+.welcome-view-1,
+.welcome-view-2,
 .background {
-  z-index: -5;
   position: fixed;
-  width: 100vw;
-  height: 100vh;
   background: repeating-linear-gradient(
       -45deg,
       transparent,
@@ -128,13 +106,62 @@ button:hover {
       var(--main-color4) 75%,
       var(--main-color4)
     );
+
   overflow: hidden;
+  height: 100vh;
+  width: 85vw;
+  position: fixed;
+  text-align: right;
+  transition: transform 3s, opacity 6s;
 }
 
-.blurred {
-  transition: background-color 0.5s;
-  z-index: 10;
-  background: var(--mask-color1);
+.welcome-view-1 {
+  padding-right: 5vmin;
+  border-right: 2px solid var(--main-color1);
+  z-index: 15;
+}
+
+.welcome-view-2 {
+  z-index: 14;
+  width: 100vw;
+  text-align: left;
+  background: none;
+  background-color: black;
+}
+
+.welcome h1,
+.welcome h2,
+.welcome p {
+  font-family: neon;
+}
+
+.welcome h1 {
+  padding-top: 30vh;
+}
+
+.welcome h2 {
+  padding-top: 4vh;
+}
+
+.welcome p {
+  padding-top: 5vh;
+  text-shadow: 0px 15px 20px var(--shadow-color);
+}
+
+.welcome-view-hidden-1 {
+  transform: translateX(-150vw);
+  opacity: 0;
+}
+
+.welcome-view-hidden-2 {
+  transform: translateY(-300vw);
+}
+/* end of welcome view */
+
+.background {
+  z-index: -5;
+  width: 100vw;
+  height: 100vh;
 }
 
 nav {
@@ -180,7 +207,7 @@ nav div {
 }
 
 .navleft a {
-  transition: color 0.5s;
+  transition: color 0.5s, opacity 4s;
 }
 
 .navleft a:hover {
@@ -189,7 +216,7 @@ nav div {
 
 .navright a {
   border-radius: 25%;
-  transition: background-color 0.5s;
+  transition: background-color 0.5s, opacity 4s;
 }
 
 .navright a:hover {
@@ -202,58 +229,33 @@ nav div {
     brightness(103%) contrast(103%);
 }
 
-.down-icon {
-  position: fixed;
-  left: 49%;
-  bottom: 6vh;
-  filter: invert(96%) sepia(97%) saturate(12%) hue-rotate(237deg)
-    brightness(103%) contrast(103%);
-  transition: display 2s;
-}
-
-header {
-  min-height: 95vh;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
-header h1,
-header h2 {
-  font-family: neon;
-}
-
-header h1 {
-  padding-top: 28vh;
-}
-
-header h2 {
-  padding-top: 3vh;
+.hidden-nav-links {
+  opacity: 0;
 }
 
 .about-me-section {
   min-height: 100vh;
-}
-
-.about-me-section h2 {
-  padding-top: 12vh;
-  padding-bottom: 12vh;
-  width: 100%;
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
 }
 
 .about-me {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
 }
 
 .about-me-img {
   max-width: 50%;
   height: 50%;
+  max-height: 45vh;
+  margin: auto;
 }
 
 .about-me-div {
@@ -262,8 +264,11 @@ header h2 {
   padding-left: 4%;
 }
 
-.about-me-div ul {
-  list-style: none;
+.slider {
+  min-height: 25vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .portfolio {
@@ -275,7 +280,7 @@ header h2 {
   width: 100%;
   font-family: neon;
   text-align: center;
-  margin-bottom: 6vh;
+  margin-bottom: 5vh;
 }
 
 .portfolio-section {
@@ -311,18 +316,32 @@ header h2 {
   padding: 2px;
 }
 
-.more-info {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  z-index: 15;
+.centered {
   position: fixed;
-  top: 25%;
-  left: 25%;
-  width: 50%;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  left: 0px;
+  top: 0px;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  z-index: -1;
+  transition: background-color 0.5s;
+}
+
+.blurred {
+  z-index: 15;
+  background: var(--mask-color1);
+}
+
+.more-info {
+  z-index: 15;
   min-height: 50%;
-  padding: 5px;
-  border: 4px solid var(--main-color1);
+  max-width: 50%;
+  padding: 2vmin;
+  margin: 2vmin;
+  border: 2px solid var(--main-color1);
   border-radius: 20px;
   background-color: var(--main-color4);
 }
@@ -338,7 +357,7 @@ header h2 {
   opacity: 0;
 }
 
-.hidden {
+.hidden-p {
   display: none;
   transition: display 2s;
 }
@@ -366,7 +385,7 @@ header h2 {
   gap: 10px;
   align-items: center;
   padding: 15px;
-  border: 2px solid var(--border-color-1);
+  border: 1px solid var(--border-color-1);
   border-radius: 25px;
   background-color: var(--main-color4);
   box-shadow: 0 0 4vmin 1vmin var(--shadow-color);
@@ -429,12 +448,7 @@ footer p img {
 
   .navleft a,
   .navright a {
-    text-decoration: none;
     font-size: 5vmin;
-  }
-
-  .about-me-section h2 {
-    padding-bottom: 3vh;
   }
 
   .about-me-img {
@@ -453,10 +467,7 @@ footer p img {
   }
 
   .more-info {
-    top: 5%;
-    left: 5%;
-    width: 90%;
-    height: 90%;
+    max-width: 90%;
   }
 
   footer p {

@@ -10,52 +10,39 @@
   </head>
 
   <body>
-    <div class="troll-view-1 troll">
-      <h1>My port</h1>
-      <h3>Im PAT</h3>
-      <p>CLICK</p>
+    <div class="welcome-view-1 welcome">
+      <h1>Patryk Orlowski</h1>
+      <h2>Frontend Web Developer</h2>
+      <p>Enter</p>
     </div>
-    <div class="troll-view-2 troll">
-      <h1>folio</h1>
-      <h3>RYK!!!</h3>
-      <p>ME!</p>
-    </div>
+    <div class="welcome-view-2 welcome"></div>
+
     <div class="background"></div>
-    <div class="mask background"></div>
 
     <nav>
       <div class="navleft">
-        <a href="#about">About</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
+        <a href="#about" class="hidden-nav-links">About</a>
+        <a href="#portfolio" class="hidden-nav-links">Portfolio</a>
+        <a href="#contact" class="hidden-nav-links">Contact</a>
       </div>
       <div class="navright">
-        <a href="https://www.linkedin.com/in/patryk-or%C5%82owski-348515258/"
+        <a
+          class="hidden-nav-links"
+          href="https://www.linkedin.com/in/patryk-or%C5%82owski-348515258/"
           ><img class="nav-icon" src="src/icons/linkedin.svg" alt="LinkedIn"
         /></a>
-        <a href="https://github.com/PatrykO92"
+        <a class="hidden-nav-links" href="https://github.com/PatrykO92"
           ><img class="nav-icon" src="src/icons/github.svg" alt="GitHub"
         /></a>
-        <a href="src/files/cv.pdf"
+        <a class="hidden-nav-links" href="src/files/cv.pdf"
           ><img class="nav-icon" src="src/icons/resume.svg" alt="Resume"
         /></a>
       </div>
     </nav>
 
-    <a id="down" href="#about"
-      ><img class="down-icon" src="src/icons/arrow_down.svg" alt="More"
-    /></a>
-
     <div class="overflowed">
-      <header>
-        <h1>Patryk Orlowski</h1>
-        <h2>Frontend Web Developer</h2>
-      </header>
-
       <main class="segment">
         <div id="about" class="about-me-section">
-          <h2>Hello! 👋</h2>
-
           <div class="about-me">
             <img
               src="src/images/myphoto.png"
@@ -63,19 +50,19 @@
               class="about-me-img"
             />
             <div class="about-me-div">
+              <h2>Hello! 👋</h2>
               My name is Patryk. I am a frontend web developer with a strong
               foundation in JavaScript and React. I am eager to continue
               learning and growing my skills in order to become an expert in web
               development. I am always looking for new challenges and
               opportunities to improve my skills and make a meaningful
               contribution to web development projects.
-
-              <ul>
-                <li>📚 HTML, CSS JavaScript</li>
-                <li>🖥️ React, Tailwind CSS</li>
-                <li>👨‍💻 Redux, Django</li>
-                <li>💾 Python, Git, ChatGPT</li>
-              </ul>
+            </div>
+            <div class="slider">
+              <div>📚 HTML, CSS JavaScript</div>
+              <div>🖥️ React, Tailwind CSS</div>
+              <div>👨‍💻 Redux, Django</div>
+              <div>💾 Python, Git</div>
             </div>
           </div>
         </div>
@@ -97,23 +84,24 @@
             <p class="project-info">Used technologies: ReacT, JS, Talwind</p>
             <button class="project-link">More</button>
           </div>
-          <div class="project more-info hidden">
-            <h2>Example Project Title</h2>
-            <a href="#">GitHub</a>
-            <a href="#">Live</a>
-            <p>
-              Lorem Lorem Ipsum is simply dummy text of the printing and
-              typesetting industry. Lorem Ipsum has been the industry's standard
-              dummy text ever since the 1500s, wLorem Lorem Ipsum is simply
-              dummy text of the printing and typesetting industry. Lorem Ipsum
-              has been the industry's standard dummy text ever since the 1500s,
-              when an unknown printer took a galley of type and scrambled it to
-              make a type specimen book. It has survived not only five
-              centuries, but also the leap into electronic typesetting,
-              remaining essentially unchanged. It was popularised in the Lorem
-              Lorem Ipsum is simply
-            </p>
-            <button class="exit-project">Exit</button>
+          <div class="centered">
+            <div class="project more-info hidden-p">
+              <h2>Example Project Title1</h2>
+              <a href="#">GitHub</a><a href="#">Live</a>
+              <p>
+                Lorem Lorem Ipsum is simply dummy text of the printing and
+                typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, wLorem Lorem Ipsum is
+                simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever
+                since the 1500s, when an unknown printer took a galley of type
+                and scrambled it to make a type specimen book. It has survived
+                not only five centuries, but also the leap into electronic
+                typesetting, remaining essentially unchanged. It was popularised
+                in the Lorem Lorem Ipsum is simply
+              </p>
+              <button class="exit-project">Exit</button>
+            </div>
           </div>
           <div class="portfolio-div">
             <img
@@ -127,23 +115,25 @@
             <p class="project-info">Used technologies: ReacT, JS, Talwind</p>
             <button class="project-link">More</button>
           </div>
-          <div class="project more-info hidden">
-            <h2>Example Project Title</h2>
-            <a href="#">GitHub</a>
-            <a href="#">Live</a>
-            <p>
-              Lorem Lorem Ipsum is simply dummy text of the printing and
-              typesetting industry. Lorem Ipsum has been the industry's standard
-              dummy text ever since the 1500s, when an unknown printer took a
-              galley of type and scrambled it to make a type specimen book. It
-              has survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum
-            </p>
-            <button class="exit-project">Exit</button>
+          <div class="centered">
+            <div class="project more-info hidden-p">
+              <h2>Example Project Title</h2>
+              <a href="#">GitHub</a>
+              <a href="#">Live</a>
+              <p>
+                Lorem Lorem Ipsum is simply dummy text of the printing and
+                typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown
+                printer took a galley of type and scrambled it to make a type
+                specimen book. It has survived not only five centuries, but also
+                the leap into electronic typesetting, remaining essentially
+                unchanged. It was popularised in the 1960s with the release of
+                Letraset sheets containing Lorem Ipsum passages, and more
+                recently with desktop publishing software like Aldus PageMaker
+                including versions of Lorem Ipsum
+              </p>
+              <button class="exit-project">Exit</button>
+            </div>
           </div>
           <div class="portfolio-div">
             <img
@@ -157,24 +147,27 @@
             <p class="project-info">Used technologies: ReacT, JS, Talwind</p>
             <button class="project-link">More</button>
           </div>
-          <div class="project more-info hidden">
-            <h2>Example Project Title</h2>
-            <a href="#">GitHub</a>
-            <a href="#">Live</a>
-            <p>
-              Lorem Lorem Ipsum is simply dummy text of the printing and
-              typesetting industry. Lorem Ipsum has been the industry's standard
-              dummy text ever since the 1500s, when an unknown printer took a
-              galley of type and scrambled it to make a type specimen book. It
-              has survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum
-            </p>
-            <button class="exit-project">Exit</button>
+          <div class="centered">
+            <div class="project more-info hidden-p">
+              <h2>Example Project Title</h2>
+              <a href="#">GitHub</a>
+              <a href="#">Live</a>
+              <p>
+                Lorem Lorem Ipsum is simply dummy text of the printing and
+                typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown
+                printer took a galley of type and scrambled it to make a type
+                specimen book. It has survived not only five centuries, but also
+                the leap into electronic typesetting, remaining essentially
+                unchanged. It was popularised in the 1960s with the release of
+                Letraset sheets containing Lorem Ipsum passages, and more
+                recently with desktop publishing software like Aldus PageMaker
+                including versions of Lorem Ipsum
+              </p>
+              <button class="exit-project">Exit</button>
+            </div>
           </div>
+
           <div class="portfolio-div">
             <img
               src="src/portfolio-projects/placeholder-image-low.png"
@@ -187,23 +180,24 @@
             <p class="project-info">Used technologies: ReacT, JS, Talwind</p>
             <button class="project-link">More</button>
           </div>
-          <div class="project more-info hidden">
-            <h2>Example Project Title</h2>
-            <a href="#">GitHub</a>
-            <a href="#">Live</a>
-            <p>
-              Lorem Lorem Ipsum is simply dummy text of the printing and
-              typesetting industry. Lorem Ipsum has been the industry's standard
-              dummy text ever since the 1500s, when an unknown printer took a
-              galley of type and scrambl☕ed it to make a type specimen book. It
-              has survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum
-            </p>
-            <button class="exit-project">Exit</button>
+          <div class="centered">
+            <div class="project more-info hidden-p">
+              <h2>Example Project Title</h2>
+              <a href="#">GitHub</a><a href="#">Live</a>
+              <p>
+                Lorem Lorem Ipsum is simply dummy text of the printing and
+                typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown
+                printer took a galley of type and scrambl☕ed it to make a type
+                specimen book. It has survived not only five centuries, but also
+                the leap into electronic typesetting, remaining essentially
+                unchanged. It was popularised in the 1960s with the release of
+                Letraset sheets containing Lorem Ipsum passages, and more
+                recently with desktop publishing software like Aldus PageMaker
+                including versions of Lorem Ipsum
+              </p>
+              <button class="exit-project">Exit</button>
+            </div>
           </div>
         </div>
       </section>
